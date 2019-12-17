@@ -1,0 +1,40 @@
+
+
+    		<div class="col">
+     		 	<div class="jumbotron jumbotron-fluid">
+  					<div class="container">
+    					<center><h2 class="display-4">Dinero en Cuenta <br>$<?php echo $results['dinero']; ?></h2>
+    					<p class="lead">Acá se verá el dinero que tienes actualmente.</p></center>
+  					</div>
+				</div>
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Ultimos movimientos</th>
+                    <th scope="col">Valor</th>
+                  </tr>
+                </thead>
+                
+                <?php while ($results_con = mysqli_fetch_array($consul_con)) { ?>
+
+                <tbody>
+                  <tr>
+                    <td><?php echo $results_con['transaccion'];?></td>
+                    <td>$<?php echo $results_con['valor'];?></td>
+                  </tr>
+                </tbody>
+              
+    
+            <?php  } ?>
+            </table>
+    		</div>
+
+  		</div>
+
+
+  		
+		
+</div>
+</body>
+</html>

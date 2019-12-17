@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col"> 
+    </div>
+    <div class="col-6">
+      <br><br>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-5">
+      <center>
+        <div style="background-color: white; border-radius: 5px;" class="border border-dark">
+            <br>
+            <h1>Registrarse</h1>
+            <span>o <a href="../../inicio_sesion/pages/login.php">Iniciar Sesión</a></span><br><br>
+
+            <form action="signup.php" method="POST">
+
+                <div class="form-group">
+                  <input name="name" autocomplete="off" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre de Usuario" required="">
+                </div>
+                <div class="form-group">
+                  <input name="email" autocomplete="off" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail" required="">
+                </div>
+
+                <div class="form-group">
+                  <input name="password" autocomplete="off" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required="">
+                </div>
+
+                <div class="form-group">
+                  <input name="confirm_password" autocomplete="off" type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirmar contraseña" required="">
+                  <small id="emailHelp" class="form-text text-muted">
+                  Al suscribirse recibirá un mail.
+                  </small>
+                </div>
+                
+
+                <div class="form-check"></div>
+                  <input type="submit" value="Registrarse" class="btn btn-dark"><hr>
+                  <?php
+                    if(!empty($message)):
+                      echo $message;
+                    endif;
+                  ?>
+            </form>
+            
+              
+            </form>
+            <br><br>
+        </div>
+      </center>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>

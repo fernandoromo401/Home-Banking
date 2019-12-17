@@ -1,0 +1,27 @@
+
+
+    		<div class="col">
+     		 	
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Ultimos movimientos</th>
+                    <th scope="col">Valor</th>
+                  </tr>
+                </thead>
+                
+                <?php while ($results_con = mysqli_fetch_array($consul_con)) { ?>
+
+                <tbody>
+                  <tr>
+                    <td><?php echo $results_con['transaccion'];?></td>
+                    <td>$<?php echo $results_con['valor'];?></td>
+                  </tr>
+                </tbody>
+              <?php  } ?>
+            </table>
+
+    		</div>
+
+  		</div>

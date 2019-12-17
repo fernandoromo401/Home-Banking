@@ -1,0 +1,50 @@
+<br>
+<script type="text/javascript">
+    function addMonto(e){
+      let input = document.getElementById('monto').value 
+      let dias = document.getElementById('dias').value 
+      let mensajes = []
+      mensajes.push(input , dias)
+      let interes = 0.45
+  
+      let total = mensajes[0] * (interes * mensajes[1] / 365) 
+  
+      document.getElementById('resultado').innerHTML = '<hr>$'+Math.floor(total)+' pesos'
+      
+
+      return false 
+    }
+</script>
+
+<div class="container-fluid">
+  		<div class="row">
+
+  			<div class="col col-lg-3">
+
+      			<div class="list-group">
+  					<a href="profile.php" class="list-group-item list-group-item-secondary">
+    				Bienvenido, <?php echo $usuario; ?>
+  					</a>
+  					<a href="insert.php" class="list-group-item list-group-item-action">✓ Ingresar Dinero</a>
+  					<a href="remove.php" class="list-group-item list-group-item-action">✓ Retirar Dinero</a>
+  					<a href="last_mv.php" class="list-group-item list-group-item-action">✓ Ultimos Movimientos</a>
+            <a href="password.php" class="list-group-item list-group-item-action">✓ Cambiar Contraseña</a>
+  					
+				</div><br>
+
+				<div class="card" style="width: 19.5rem; ">
+  					<div class="card-body">
+    					<p class="card-text">Simulador de Plazo Fijo</p>	
+              <form class="form" onsubmit="return addMonto(this);">
+                  <div class="form-group">
+                      <input type="number" id="monto" class="form-control" placeholder="Monto a invertir">
+                      <input type="number" id="dias" class="form-control" placeholder="Dias del Plazo">
+                  </div>
+              <button  class="btn btn-primary">Calcular</button>
+              </form>
+              <div id="resultado"></div>
+  					</div>
+
+				</div>
+
+    		</div>
